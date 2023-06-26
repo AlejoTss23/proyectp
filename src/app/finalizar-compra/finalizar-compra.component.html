@@ -1,0 +1,55 @@
+<section class="container-finalizar-compra">
+    <div  class="medios-de-pago">
+        <p>Medios de Pago</p>
+        <div  class="cta-medios-de-pago">
+            <button (click)="mostrarFormulario()">Transferencia</button>
+            <button (click)="mostrarFormulario1()" >Mercado Pago</button>
+            <button (click)="mostrarFormulario3()"> Tarjeta Debito</button>
+        </div>
+    </div>
+</section >
+<section class="section"  > 
+<div  *ngIf="mostrar" class="formulario-flotante">
+    <form>
+     <p>Nº de cuenta: 111111111</p>
+     <p>CVU:123456789</p>
+      <button class="Swal" type="submit">Finalizar Compra</button>
+    </form>
+</div>
+<div *ngIf="mostrar1" class="formulario-flotante">
+    <form>
+     <p>Alias:proyect.lab</p>
+     <p>CVU:123456789</p>
+      <button class="Swal" type="submit">Finalizar Compra</button>
+    </form>
+</div>
+
+<div *ngIf="mostrar3" class="formulario-flotante1">
+    <form>
+        <label for="nombre">Tarjeta:</label>
+        <br>
+        <input type="checkbox" id="miCheckbox" name="miCheckbox">
+        <label for="miCheckbox">Visa</label>
+        <br>
+        <input type="checkbox" id="miCheckbox" name="miCheckbox">
+        <label for="miCheckbox">MasterCard</label>
+        <label for="numero">Número de tarjeta:</label>
+        <input type="text" id="numero" name="numero" required>
+        <br>
+        <label for="fecha">Caducidad:</label>
+        <select id="fecha" name="fecha" required>
+          <option value="">Seleccionar</option>
+          <option value="01/2023">01/2023</option>
+          <option value="02/2023">03/2027</option>
+          <!-- Agrega aquí más opciones de fechas de expiración -->
+        </select>
+        <br>  
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" required  maxlength="3">
+        <br>
+        <button type="submit">Finalizar Compra</button>
+        
+      </form>
+      
+</div>
+</section>
